@@ -1,0 +1,289 @@
+/* Import base styles from App.css */
+@import '../App.css';
+
+/* ============================
+   DARK MODE OVERRIDES
+   ============================ */
+.app {
+  background: #0a0a0a;
+}
+
+/* Hero Enhancements */
+.hero-badge {
+  display: inline-block;
+  background: rgba(244,114,182,0.15);
+  border: 1px solid rgba(244,114,182,0.4);
+  color: #f472b6;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 0.4rem 1rem;
+  border-radius: 30px;
+  margin-bottom: 1.2rem;
+}
+
+.hero-content h1 {
+  font-size: 5rem;
+  font-weight: 900;
+  color: #fff;
+  text-shadow: none;
+  line-height: 1.05;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #f8b4d9, #f472b6);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-btns {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.hero-btns .btn-secondary {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(244, 114, 182, 0.7); }
+  70% { box-shadow: 0 0 0 15px rgba(244, 114, 182, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(244, 114, 182, 0); }
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid rgba(255,255,255,0.3);
+  color: #fff;
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.btn-outline:hover {
+  border-color: #f472b6;
+  color: #f472b6;
+}
+
+.hero-stats {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.stat { text-align: center; }
+.stat span { display: block; color: #fff; font-size: 1.4rem; font-weight: 800; }
+.stat p { color: rgba(255,255,255,0.55); font-size: 0.8rem; margin-top: 0.2rem; }
+.stat-divider { width: 1px; height: 40px; background: rgba(255,255,255,0.2); }
+
+/* Section dark */
+.section { background: transparent; }
+
+.section-header { text-align: center; margin-bottom: 3rem; }
+.section-title { color: #fff; margin-bottom: 0.5rem; }
+.section-subtitle { color: #777; font-size: 1rem; }
+
+/* Category cards dark */
+.category-card {
+  display: block;
+  text-decoration: none;
+}
+
+.category-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.75) 0%, transparent 60%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.5rem;
+  transition: all 0.3s;
+}
+
+.category-overlay .category-name {
+  position: static;
+  transform: none;
+  background: none;
+  color: #fff;
+  font-size: 1.15rem;
+  font-weight: 700;
+  padding: 0;
+  box-shadow: none;
+  white-space: normal;
+  margin-bottom: 0.3rem;
+}
+
+.category-overlay span {
+  color: #f472b6;
+  font-size: 0.85rem;
+  font-weight: 600;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: all 0.3s;
+}
+
+.category-card:hover .category-overlay span {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Product cards dark */
+.product-card {
+  background: #111;
+  border: 1px solid rgba(255,255,255,0.07);
+  padding-bottom: 0;
+}
+
+.product-card:hover {
+  box-shadow: 0 20px 50px rgba(244,114,182,0.15);
+}
+
+.product-img-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.product-img { transition: transform 0.4s; }
+.product-card:hover .product-img { transform: scale(1.06); }
+
+.product-quick-view {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.product-quick-view a {
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border: 2px solid #fff;
+  padding: 0.5rem 1.2rem;
+  border-radius: 25px;
+  text-decoration: none;
+}
+
+.product-card:hover .product-quick-view { opacity: 1; }
+
+.product-info {
+  padding: 1.2rem;
+  text-align: left;
+}
+
+.product-tag {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #f472b6;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.product-info h3 {
+  color: #fff;
+  margin: 0.3rem 0 0.8rem;
+  font-size: 1rem;
+}
+
+.product-footer-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.product-price { color: #f472b6; font-size: 1.15rem; font-weight: 800; margin-bottom: 0; }
+
+.btn-buy {
+  background: linear-gradient(135deg, #f472b6, #ec4899);
+  color: #fff;
+  border: none;
+  padding: 0.45rem 1rem;
+  border-radius: 20px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  width: auto;
+  display: inline-block;
+  margin: 0;
+}
+
+.btn-buy:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(244,114,182,0.4);
+  background-color: initial;
+  color: #fff;
+  border-color: initial;
+}
+
+.view-all-wrap { text-align: center; margin-top: 3rem; }
+
+.btn-view-all {
+  background: transparent;
+  border: 2px solid rgba(244,114,182,0.4);
+  color: #f472b6;
+  padding: 0.85rem 2.5rem;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-view-all:hover {
+  background: linear-gradient(135deg, #f472b6, #ec4899);
+  color: #fff;
+  border-color: transparent;
+}
+
+/* Banner dark */
+.banner {
+  background-image: linear-gradient(135deg, #9d174d 0%, #be185d 50%, #ec4899 100%);
+  margin: 0 5% 4rem;
+}
+
+.banner-content { display: flex; flex-direction: column; align-items: center; gap: 1.2rem; }
+
+/* Footer dark */
+.footer {
+  background: #060606;
+  border-top: 1px solid rgba(255,255,255,0.07);
+}
+
+.footer-col h3 { color: #fff; }
+.footer-col p, .footer-col a { color: #777; }
+.footer-col a:hover { color: #f472b6; }
+.footer-bottom { border-top: 1px solid rgba(255,255,255,0.07); color: #555; }
+
+.logo {
+  background: linear-gradient(135deg, #f8b4d9, #f472b6);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.social-icon {
+  background: #1a1a1a;
+  color: #aaa;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.social-icon:hover {
+  background: #f472b6;
+  color: #fff;
+}
+
+@media (max-width: 600px) {
+  .hero-content h1 { font-size: 2.5rem; }
+  .hero-btns { flex-direction: column; align-items: center; }
+  .hero-stats { gap: 1rem; }
+  .stat span { font-size: 1.1rem; }
+}

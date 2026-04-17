@@ -1,0 +1,92 @@
+.auth-page {
+  min-height: 100vh;
+  background: radial-gradient(ellipse at top, #1a0a14 0%, #0a0a0a 70%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.auth-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 24px;
+  padding: 2.5rem;
+  width: 100%;
+  max-width: 420px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 30px 80px rgba(0,0,0,0.5);
+}
+
+.auth-header { text-align: center; margin-bottom: 2rem; }
+
+.auth-logo {
+  font-size: 1.8rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #f8b4d9, #f472b6);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 0.8rem;
+}
+
+.auth-header h1 { color: #fff; font-size: 1.6rem; font-weight: 800; margin-bottom: 0.4rem; }
+.auth-header p { color: #777; font-size: 0.95rem; }
+
+.auth-form { display: flex; flex-direction: column; gap: 1.2rem; }
+
+.form-group { display: flex; flex-direction: column; gap: 0.4rem; }
+
+.form-group label {
+  color: #bbb;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.form-group input {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 12px;
+  padding: 0.75rem 1rem;
+  color: #fff;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.form-group input:focus {
+  border-color: #f472b6;
+  box-shadow: 0 0 0 3px rgba(244,114,182,0.15);
+}
+
+.form-group input::placeholder { color: #555; }
+
+.auth-btn {
+  background: linear-gradient(135deg, #f472b6, #ec4899);
+  color: #fff;
+  border: none;
+  padding: 0.85rem;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.auth-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(244,114,182,0.45);
+}
+
+.auth-btn:disabled { opacity: 0.6; cursor: not-allowed; }
+
+.auth-switch {
+  text-align: center;
+  margin-top: 1.5rem;
+  color: #777;
+  font-size: 0.9rem;
+}
+
+.auth-switch a { color: #f472b6; text-decoration: none; font-weight: 600; }
+.auth-switch a:hover { text-decoration: underline; }
