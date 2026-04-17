@@ -12,6 +12,9 @@ server/.env
 dist/
 client/dist/
 
+# Vite cache
+.vite/
+
 # Logs
 *.log
 npm-debug.log*
