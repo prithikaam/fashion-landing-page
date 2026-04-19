@@ -98,7 +98,7 @@
   display: block;
   width: 26px;
   height: 2px;
-  background: #f472b6;
+  background: #333 !important;
   border-radius: 2px;
   transition: all 0.3s;
 }
